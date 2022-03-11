@@ -1,5 +1,5 @@
 {
-  "name": "@lm/components",
+  "name": "@lm_fe/components",
   "version": "0.0.6",
   "description": "",
   "scripts": {
@@ -30,5 +30,5 @@
     "access": "public"
   },
   "license": "MIT",
-  "gitHead": "3977cd388458e4d1b6fb24555a693c37a7ed554a"
+  "gitHead": "37b1605bec1efdbf690214444b9518e768f1df8f"
 }

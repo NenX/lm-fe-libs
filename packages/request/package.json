@@ -1,5 +1,5 @@
 {
-  "name": "@lm/request",
+  "name": "@lm_fe/request",
   "version": "0.0.6",
   "description": "",
   "scripts": {
@@ -22,5 +22,5 @@
   "dependencies": {
     "axios": "^0.26.0"
   },
-  "gitHead": "3977cd388458e4d1b6fb24555a693c37a7ed554a"
+  "gitHead": "37b1605bec1efdbf690214444b9518e768f1df8f"
 }

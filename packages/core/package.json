@@ -1,5 +1,5 @@
 {
-  "name": "@lm/core",
+  "name": "@lm_fe/core",
   "version": "0.0.6",
   "description": "",
   "scripts": {
@@ -11,7 +11,7 @@
     "lib": "dist"
   },
   "bin": {
-    "fk": "./bin/fk.js"
+    "fk": "./bin/index.js"
   },
   "files": [
     "dist",
@@ -24,11 +24,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@vitejs/plugin-react": "^1.0.7",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0"
+    
   },
-  "gitHead": "3977cd388458e4d1b6fb24555a693c37a7ed554a"
+  "gitHead": "37b1605bec1efdbf690214444b9518e768f1df8f"
 }
