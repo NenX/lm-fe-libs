@@ -1,6 +1,6 @@
 {
   "name": "@lm_fe/core",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,8 +23,5 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    
-  },
   "gitHead": "37b1605bec1efdbf690214444b9518e768f1df8f"
 }
