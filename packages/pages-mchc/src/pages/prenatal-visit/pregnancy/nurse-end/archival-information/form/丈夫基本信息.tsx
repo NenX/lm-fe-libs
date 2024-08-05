@@ -5,7 +5,7 @@ import { IMchc_FormDescriptions_Field_Nullable } from "@lm_fe/service";
 
 export const 丈夫基本信息_config = () => {
     const config: IMchc_FormDescriptions_Field_Nullable = {
-        "name": "丈夫基本信息11",
+        "name": "丈夫基本信息1122",
         "children": [{
             "key": "partnerInfo.partnerName",
             "label": "姓名",
