@@ -1,0 +1,23 @@
+// @import '../../../assets/styles/theme/variables.less';
+
+.foetal-panel {
+  display: flex;
+  align-items: center;
+  &:hover {
+    .foetal-panel-delete {
+      visibility: visible;
+    }
+  }
+}
+
+.foetal-panel-content {
+  width: 100%;
+}
+
+.foetal-panel-delete {
+  cursor: pointer;
+  visibility: hidden;
+  &:hover {
+    // color: @global-delete-hover-bg-color;
+  }
+}

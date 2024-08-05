@@ -1,0 +1,41 @@
+.result-textarea-wrapper {
+  position: relative;
+
+  &-tag {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    width: 0;
+    height: 0;
+    border-width: 20px 20px 20px 20px;
+    border-color: transparent #d8dce6 #d8dce6 transparent;
+    border-style: solid;
+    border-radius: 4px;
+    background: transparent;
+
+    button {
+      position: absolute;
+      left: -10px;
+      bottom: -27px;
+      word-break: keep-all;
+      color: #000;
+      font-size: 12px;
+      padding: 4px;
+    }
+  }
+}
+
+.result-textarea-modal {
+  .ant-modal-body {
+    max-height: 80vh;
+    overflow: auto;
+  }
+  .ant-modal-footer {
+    text-align: center;
+  }
+
+  &-tree {
+    // background-color: #fcf;
+    padding-left: 24px;
+  }
+}

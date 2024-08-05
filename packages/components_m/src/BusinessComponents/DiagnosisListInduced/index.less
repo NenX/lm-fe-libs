@@ -1,0 +1,82 @@
+.diagnosis-wrapper {
+  .diagnosis-action {
+    margin-bottom: 8px;
+  }
+
+  .diagnosis-list {
+    list-style: none;
+    padding-left: 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin-bottom: 8px;
+      font-weight: bold;
+
+      &-sequence {
+        font-style: normal;
+        margin-right: 2px;
+      }
+
+      &-text {
+        display: inline-block;
+        max-width: 268px;
+        vertical-align: middle;
+        word-wrap: break-word;
+        word-break: normal;
+      }
+
+      &-input {
+        flex: 1;
+      }
+
+      &-extra {
+        margin-left: 24px;
+        font-weight: normal;
+      }
+
+      .ant-input,
+      .ant-input-number {
+        width: auto;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        box-shadow: none;
+        border-radius: 0;
+
+        .ant-input-number-input {
+          padding: 0 6px;
+        }
+      }
+
+      .ant-input-number-handler-wrap {
+        display: none;
+      }
+    }
+  }
+}
+
+.diagnosis-modal {
+  &-search {
+    text-align: center;
+
+    &-tags {
+      position: relative;
+    }
+
+    &-add {
+      position: absolute;
+      top: 0;
+      right: 8px;
+    }
+  }
+
+  &-content {
+    height: 60vh;
+    padding: 12px 24px 0 24px;
+    overflow: auto;
+  }
+}

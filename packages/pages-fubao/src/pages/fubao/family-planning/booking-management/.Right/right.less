@@ -1,0 +1,213 @@
+.month-item {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  transition: all 0.2s;
+
+  .head-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .day-num {
+    color: #2b384f;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.month-item:hover {
+  z-index: 1;
+  height: unset;
+  overflow: visible;
+  background: #fff;
+  box-shadow: 0px 0px 12px 2px #aaa;
+  opacity: 1 !important;
+}
+
+.month-item.today {
+  border-bottom: 1px solid #0f318d;
+
+  .day-num {
+    padding: 5px;
+    color: #fff;
+    background-color: #0f318d;
+    border-radius: 50%;
+  }
+}
+
+.border-left-right {
+  border-right: 2px solid rgb(44, 129, 226);
+  border-left: 2px solid rgb(44, 129, 226);
+}
+
+.date-item {
+  .handle {
+    margin: 8px 8px 0 0;
+    text-align: right;
+  }
+
+  .space {
+    margin: 0 16px;
+  }
+
+  .ant-col {
+    line-height: 14px;
+  }
+
+  .word.operation-name {
+    margin: 14px 0 0 0;
+  }
+
+  .operation-name-row {
+    padding-top: 4px;
+  }
+}
+
+.date-booking-button {
+  opacity: 0;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.date-booking-button.visible {
+  opacity: 1;
+}
+
+.drop-container {
+  .disabled-img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    // background: url(../../../surgery-scheduling/images/set.svg) no-repeat center;
+    background-size: contain;
+    transform: rotateZ(45deg);
+  }
+
+  .disabled-word {
+    display: inline-block;
+    padding-left: 6px;
+    color: rgba(251, 152, 36, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+}
+
+.date-tips {
+  padding: 10px 20px;
+  color: #856404;
+  background: #fff3cd;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 0px 10px 1px rgba(158, 158, 158, 0.19);
+
+  .disabled-img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    // background: url(../../../surgery-scheduling/images/set.svg) no-repeat center;
+    background-size: contain;
+    transform: rotateZ(45deg);
+  }
+
+  .disabled-word {
+    display: inline-block;
+    padding-left: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+}
+
+.date-tips-day {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.date-tips-morning {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.date-tips-afternoon {
+  position: absolute;
+  bottom: 21%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.stupid-modal-body {
+  .ant-table-thead>tr>th {
+    background: #edeef6;
+  }
+}
+
+.week-add-button {
+  color: #5a6676;
+  border: 1px dashed #5a6676;
+
+  &:hover {
+    color: #383f4a;
+    border: 1px dashed #383f4a;
+  }
+}
+
+.week-add-button.disabled {
+  color: rgba(130, 140, 153, 0.2);
+  border: 1px dashed rgba(130, 140, 153, 0.2);
+}
+
+@media (max-width: 1601px) {
+  .date-item {
+    margin: 0 2px !important;
+
+    .word {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .handle {
+      margin: 2px 8px 0 0;
+    }
+
+    .space {
+      margin: 0 8px;
+    }
+
+    .word.operation-name {
+      margin: 0;
+    }
+
+    .operation-name-row {
+      padding-top: 0;
+    }
+  }
+
+  .month-item:hover {
+    z-index: 1;
+    width: 188px;
+    height: unset;
+    overflow: visible;
+    background: #fff;
+    box-shadow: 0px 0px 12px 2px #aaa;
+    opacity: 1 !important;
+  }
+}

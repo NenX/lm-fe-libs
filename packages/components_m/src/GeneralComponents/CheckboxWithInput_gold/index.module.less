@@ -1,0 +1,64 @@
+@issue-bg-color: red;
+@border-width: 1px !important;
+
+
+.wrapper {
+
+  input {
+    border-width: 0 !important;
+    border-bottom-width: @border-width;
+    border-radius: 0 !important;
+
+    &:focus {
+      box-shadow: none !important;
+      border-width: 0 !important;
+      border-bottom-width: @border-width;
+    }
+
+    &:hover {
+      border-width: 0 !important;
+      border-bottom-width: @border-width;
+    }
+  }
+
+  :global(.ant-select-selector) {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  :global(.ant-select-selection-search-input) {
+    border-width: 0 !important;
+    border-width: @border-width;
+  }
+}
+
+.block-box {
+  display: block !important;
+
+  &>div {
+    margin-bottom: 6px;
+  }
+}
+
+.flex-box {
+  display: flex;
+}
+
+.warning {
+
+  :global(.ant-checkbox-checked .ant-checkbox-inner) {
+    background: @issue-bg-color !important;
+    border-color: @issue-bg-color !important;
+  }
+
+  :global(.ant-input) {
+    color: @issue-bg-color !important;
+    border-color: @issue-bg-color !important;
+
+
+  }
+
+  :global(.ant-select-selection-search-input) {
+    border-color: @issue-bg-color !important;
+  }
+}

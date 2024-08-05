@@ -1,0 +1,150 @@
+// @import '../../assets/styles/theme/variables.less';
+@import './index.less';
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  // 与输入器同行的label
+  .form-item-inline-label {
+    // height: @prenatal-diagnosis-input-height;
+    // width: @prenatal-diagnosis-label-width;
+    // min-width: @prenatal-diagnosis-label-width;
+    padding-left: 12px;
+    text-align: right;
+    color: #36316d;
+
+    .label-unit {
+      margin-left: 3px;
+      font-style: none;
+      font-size: 10px;
+      // color: @text-color-secondary;
+    }
+  }
+
+  .form-item-main {
+    flex: 1;
+    // width: calc(100% - @prenatal-diagnosis-label-width);
+
+    .ant-input-number {
+      width: 100%;
+    }
+
+    .check-box {
+      // line-height: @height-base;
+
+      .checkox-with-extra {
+        .ant-checkbox {
+          top: 0;
+        }
+      }
+    }
+
+    // 红框样式
+    &-error {
+      transition: all 0.3s;
+
+      textarea,
+      .ant-select-selector,
+      .ant-picker,
+      .ant-input,
+      .ant-input-number-input,
+      .ant-cascader-picker,
+      // .ant-cascader-input,
+      .ant-radio-wrapper,
+      .ant-checkbox-inner {
+        background: #fce7e7;
+        border: 1px solid red;
+        // border-radius: @border-radius-base;
+      }
+    }
+
+    &-warn {
+      textarea,
+      .ant-select-selector,
+      .ant-picker,
+      .ant-input,
+      .ant-input-number-input,
+      .ant-cascader-picker,
+      // .ant-cascader-input,
+      .ant-radio-wrapper,
+      .ant-checkbox-inner {
+        color: #ff517d;
+      }
+    }
+  }
+
+  .form-item-full-main {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .form-item-unit {
+    padding-left: 5px;
+    // width: @prenatal-diagnosis-form-item-width;
+    text-align: left;
+  }
+
+  .form-item-required {
+    display: inline-block;
+    margin-right: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-style: normal;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+  }
+}
+
+// 在输入器上方的label
+.form-item-header-label {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  .form-item-header-label-before {
+    height: 10px;
+    width: 6px;
+    background-color: #1504e3;
+  }
+
+  .form-item-header-label-text {
+    width: 100%;
+    font-size: 15px;
+    padding-left: 8px;
+    // border-bottom: 1px solid @prenatal-diagnosis-label-line-color;
+    position: relative;
+
+    > span {
+      position: absolute;
+      top: -6px;
+      left: 12px;
+      padding: 0 8px;
+      font-weight: 600;
+      // background-color: @prenatal-diagnosis-bg-color;
+    }
+  }
+
+  .form-item-just-label {
+    span {
+      display: inline-block;
+      width: 130px;
+      text-align: right;
+      color: #36316d;
+      font-size: 15px;
+      padding-right: 10px;
+      background-color: #fff;
+    }
+  }
+}
+
+.form-item-error {
+  // margin-left: @prenatal-diagnosis-label-width;
+  // 减去label和unit的值
+  max-width: 200px;
+  text-align: left;
+  color: red;
+}

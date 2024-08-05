@@ -1,0 +1,77 @@
+// 替换 antd less
+// 所有的默认 less 变量 https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+@theme: #0e318d;
+@black: #000000;
+@primary-color: #0e318d;
+@table-border-color: #999;
+@border-color-split: #f0f0f0;
+
+// height rules
+@height-base: 28px;
+@height-lg: 36px;
+@height-sm: 24px;
+@line-height-base: 1.4715;
+@white: #fff;
+// vertical paddings
+@padding-lg: 16px; // containers
+@padding-md: 12px; // small containers and buttons
+@padding-sm: 8px; // Form controls and items
+@padding-xs: 6px; // small items
+@padding-xss: 4px; // more small
+
+// @font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei','微软雅黑', Arial, sans-serif;
+@font-family: Roboto, 'Helvetica Neue', Helvetica, Tahoma, Arial, 'PingFang SC', 'Microsoft YaHei';
+@text-color: fade(@black, 85%);
+@text-color-secondary: rgba(0, 0, 0, 0.65); // 次文本色
+
+@disabled-color: @text-color;
+@disabled-color-dark: fade(#fff, 85%);
+
+@layout-body-background: #f0f2f5; // #f8f8fb
+@layout-header-background: @primary-color;
+@btn-primary-bg: @primary-color;
+@layout-header-height: 48px;
+@layout-header-padding: 0 12px;
+@layout-header-color: #ffffff;
+@layout-sider-background: #ffffff;
+
+// menu菜单
+@menu-collapsed-width: 50px;
+@menu-inline-toplevel-item-height: 36px;
+@menu-item-height: 32px;
+@menu-one-level-height: 36px;
+@menu-icon-size: 16px;
+@menu-item-color: #383f4a;
+@menu-item-vertical-margin: 0;
+
+// form
+@form-item-margin-bottom: 16px;
+
+// default
+@table-padding-vertical: 8px;
+@table-padding-horizontal: 8px;
+
+// table
+@table-font-size: 14px;
+@table-font-size-md: 13px;
+@table-font-size-sm: 12px;
+@table-header-bg: #ffffff;
+@table-bg: #ffffff;
+
+// buttons
+@btn-font-size-sm: 12px;
+// @border-radius-base: 4px;
+
+// modal
+@modal-body-padding: 8px; // @padding-xs;
+@modal-footer-padding-vertical: 8px; // @padding-xs;
+@modal-mask-bg: fade(@black, 25%);
+@modal-header-close-size: 46px;
+@menu-item-boundary-margin: 4px;
+@issue-bg-color: #ff517d;
+
+@link-color: @primary-color;
+@menu-highlight-color: @primary-color;
+@menu-dark-highlight-color: @primary-color;
+@tabs-ink-bar-color: @primary-color;
+@tabs-card-active-color: @primary-color;

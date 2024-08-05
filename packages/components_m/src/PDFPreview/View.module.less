@@ -1,0 +1,49 @@
+.pdf-container {
+  display: inline-block;
+  min-width: 210mm;
+  overflow-y: auto;
+
+  &-document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-page {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      margin-bottom: 1em;
+
+      .react-pdf__Page__textContent {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.pdf-modal-wrap {
+  :global(.ant-modal) {
+    padding: 0;
+  }
+
+  :global(.ant-modal-content) {
+    height: 96vh;
+    overflow: hidden;
+  }
+
+  :global(.ant-modal-header) {
+    padding: 6px 12px;
+  }
+
+  :global(.ant-modal-close) {
+    :global(.ant-modal-close-x) {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+    }
+  }
+
+  :global(.ant-modal-body) {
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,77 @@
+// @import '../../../assets/styles/theme/variables.less';
+@import '../../themes/common.less';
+.base-edit-panel-form_section {
+  margin: 4px;
+  // padding: 8px;
+  border-radius: @border-radius-base;
+  position: relative;
+
+  &.border {
+    border: 1px solid #d7dce7;
+    margin: 16px 0;
+    padding: 16px 8px 4px;
+  }
+
+  &_title {
+    position: absolute;
+    top: -13px;
+    left: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #150f55;
+    display: inline-block;
+    padding: 0 12px;
+    background: #fff;
+    // background-color: @global-edit-panel-bg-color;
+  }
+
+  .ant-divider-horizontal.ant-divider-with-text {
+    margin: 6px 0;
+    &:after,
+    &:before {
+      border-top-color: #d7dce7;
+    }
+  }
+
+  .ant-form-item-control-input {
+    .ant-input-number,
+    .ant-picker {
+      width: 100%;
+    }
+  }
+}
+
+.base-edit-panel-form_btns {
+  display: inline-block;
+  position: fixed;
+  bottom: 24px;
+  right: 40px;
+
+  .ant-btn {
+    // box-shadow: 0px 9px 10px -6px fade(@text-color, 10%), 0px 2px 8px -4px @text-color;
+  }
+
+  .ant-btn-lg {
+    min-width: 124px;
+    // border-radius: @border-radius-base;
+  }
+
+  .ant-form-item-control-input-content {
+    text-align: center;
+  }
+}
+
+.base-edit-panel-form_freebtns {
+  position: absolute;
+  top: 18px;
+  left: 3px;
+}
+
+.form-spin-wrapper {
+  min-height: 100%;
+
+  .ant-spin-container,
+  .form-spin-wrapper-spinning {
+    min-height: 400px;
+  }
+}

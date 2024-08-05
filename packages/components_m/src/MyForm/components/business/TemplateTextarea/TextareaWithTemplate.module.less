@@ -1,0 +1,49 @@
+.textarea-with-template {
+  display: flex;
+
+  :global(.ant-input-textarea) {
+    width: 100%;
+  }
+
+  &__modal {
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      &__items {
+        margin-right: 8px;
+      }
+    }
+
+    &-body {
+      margin: 10px 0;
+
+      .template-list-item {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        .template-list-item-icon {
+          font-size: 12px;
+          opacity: 0.8;
+          cursor: pointer;
+          margin-left: 8px;
+        }
+
+        .template-list-item-icon__delete {
+          color: #ff0000;
+        }
+      }
+    }
+
+    :global(.ant-modal-content) {
+
+      :global(.ant-modal-header),
+      :global(.ant-modal-body),
+      :global(.ant-modal-footer) {
+        padding: 10px;
+      }
+    }
+  }
+}

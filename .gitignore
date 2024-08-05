@@ -350,14 +350,12 @@ MigrationBackup/
 .ionide/
 
 
-**/*.svg
 .umi
 .umi-production
-/dist
+**/*/dist
 .dockerignore
 .DS_Store
 .eslintignore
-*.png
 *.toml
 docker
 .editorconfig

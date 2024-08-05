@@ -1,0 +1,31 @@
+import { MchcType_default, MchcTypes } from "@lm_fe/env"
+
+export type IMchc_Admission_HeaderInfoOfInpatientEmr<T extends MchcTypes = MchcType_default> = {
+    "id": 7276,
+    "infectionLable": null,
+    "deliveryLable": null,
+    "fetalNumLable": null,
+    "cicatrixLable": "",
+    "bloodGlucoseLable": null,
+    "bloodGlucoseLableLevel": null,
+    "vteLabel": null,
+    "fallLable": null,
+    "pressureSoresLable": null,
+    "name": "李清欢",
+    "age": 30,
+    "currentGesweek": "42",
+    "labourWeek": null,
+    "labourDate": null,
+    "daysAfterDelivery": null,
+    "edd": "2021-10-08",
+    "inpatientNO": "1",
+    "outpatientNO": "875641387583",
+    "gravidity": 1,
+    "parity": 0,
+    "infectionNote": null,
+    "highriskNote": null,
+    "postpartumComplicatedDisease": null,
+    "intrapartumComplicatedDisease": null,
+    "nurseLevel": "特级",
+    "hishRiskLable": null
+}

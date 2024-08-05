@@ -1,0 +1,25 @@
+.border-title-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  .border {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+  .span {
+    position: absolute;
+    margin-left: 30px;
+    padding: 0 10px;
+    background: #fff;
+    &::before {
+      position: absolute;
+      top: 8px;
+      left: -30px;
+      width: 30px;
+      height: 8px;
+      background-color: #ccc;
+      content: ' ';
+    }
+  }
+}

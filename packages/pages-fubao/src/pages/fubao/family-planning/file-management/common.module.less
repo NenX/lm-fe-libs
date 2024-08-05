@@ -1,0 +1,61 @@
+.gy-empty-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #fff;
+}
+
+.family-planning-list-container {
+    border: 1px solid #d7dce7;
+    border-radius: 5px;
+}
+
+.family-planning-list {
+    border-bottom: 1px solid #d7dce7;
+
+    .two-cancers-doctor-desk-first-visit-sider-list_title {
+        padding: 8px;
+        background-color: #f5f6fa;
+    }
+
+    .doctor-desk-first-visit-sider-list__item-title {
+        color: #383f4a;
+    }
+
+    .date {
+        color: #828c99;
+    }
+
+    .label-result {
+        margin-left: 12px;
+        color: rgb(24, 144, 255);
+
+        &.red {
+            color: rgb(205, 72, 57);
+        }
+    }
+
+    .doctor-desk-first-visit-sider-list__item {
+        padding: 8px 12px;
+        font-size: 13px;
+        cursor: pointer;
+
+        &.active {
+            .doctor-desk-first-visit-sider-list__item-title {
+                color: #007aff;
+                font-weight: 600;
+            }
+
+            .date {
+                color: #383f4a;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

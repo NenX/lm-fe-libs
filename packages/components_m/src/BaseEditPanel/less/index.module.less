@@ -1,0 +1,36 @@
+// @import '../../../assets/styles/theme/variables.less';
+
+.ant-form-item-has-error {
+  .ant-checkbox-inner {
+    // border-color: @error-color;
+  }
+}
+
+.base-edit-panel {
+  height: 100%;
+  overflow: auto;
+  padding: 12px;
+  padding-bottom: 64px;
+  // background: @global-edit-panel-bg-color;
+
+  .ant-form {
+    min-width: 100% !important;
+    padding-bottom: 40px;
+    position: relative;
+  }
+
+  .ant-form-item {
+    &.ant-form-item-with-help {
+      // margin-bottom: @form-item-margin-bottom;
+    }
+
+    .ant-form-item-control {
+      .ant-form-item-explain {
+        display: none;
+      }
+    }
+  }
+  .ant-col-0 {
+    display: none;
+  }
+}

@@ -1,0 +1,56 @@
+// @import '../../../assets/styles/theme/variables.less';
+
+.routertabs {
+  height: 36px;
+  // background: @tab-btn-bg-color;
+
+  .react-contextmenu {
+    z-index: 20;
+  }
+
+  &-btns {
+    height: 100%;
+    margin-right: 52px;
+    overflow-y: hidden;
+
+    &-inner {
+      zoom: 1;
+      white-space: nowrap;
+
+      & > .react-contextmenu-wrapper {
+        display: inline-block;
+
+        &:last-child {
+          background-color: #fcf;
+
+          .tab-btn:before {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 36px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    // background: @tab-btn-bg-color;
+    z-index: 99;
+
+    .dropdown {
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+}
+
+.routertabs-overlay {
+  max-height: 300px;
+  overflow-y: scroll;
+  // border: 1px solid @router-tabs-overlay-border-color;
+}

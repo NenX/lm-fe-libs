@@ -1,0 +1,105 @@
+import { map, get, set } from 'lodash';
+import moment from 'moment';
+import { safe_json_parse as strToJson, safe_json_stringify as jsonToStr, formatDateTime, formatDate } from '@lm_fe/utils';
+
+//数据转换
+export const valueToApi = (values: any, user: any) => {
+  if (!get(values, 'followUpDate')) {
+    set(values, 'followUpDate', moment());
+  }
+  if (!get(values, 'followUpPerson')) {
+    set(values, 'followUpPerson', get(user, 'firstName'));
+  }
+
+  map(values, (data, index) => {
+    if (index === 'followUpDate') {
+      set(values, index, data ? moment(data) : null);
+    }
+    if (
+      [
+        'followUpWay',
+        'followUpSituation',
+        'pregnancyCauses',
+        'immediatelyImplement',
+        'noticeMatters',
+        'guidanceForProperUse',
+        'menstruationBleeding',
+      ].includes(index)
+    ) {
+      set(values, index, { checkedValues: [data], withInputValues: {} });
+    }
+    if (
+      [
+        'pastContraceptiveMethods',
+        'afterMiscarriageFirstContraceptiveMethods',
+        'futureContraceptiveMethods',
+        'nowContraceptiveMethods',
+      ].includes(index)
+    ) {
+      set(values, index, strToJson(data));
+    }
+    if (
+      [
+        'menstruationRestored',
+        'stomachAche',
+        'resumeSex',
+        'insistUseContraceptiveMethods',
+        'replaceContraceptiveMethods',
+        'unexpectedPregnancyAgain',
+        'suggestBeginTime',
+      ].includes(index)
+    ) {
+      set(values, index, { checkedValues: [data], withInputValues: get(values, `${index}Note`) });
+    }
+  });
+  return values;
+};
+export const valueToForm = (values: any) => {
+  map(values, (item, key) => {
+    if (key === 'followUpDate') {
+      set(values, key, formatDate(item));
+    }
+    if (
+      [
+        'followUpWay',
+        'followUpSituation',
+        'pregnancyCauses',
+        'immediatelyImplement',
+        'noticeMatters',
+        'guidanceForProperUse',
+        'menstruationBleeding',
+      ].includes(key)
+    ) {
+      const checkedValues = get(item, 'checkedValues.0');
+      set(values, key, checkedValues);
+    }
+    if (
+      [
+        'pastContraceptiveMethods',
+        'afterMiscarriageFirstContraceptiveMethods',
+        'futureContraceptiveMethods',
+        'nowContraceptiveMethods',
+      ].includes(key) &&
+      values
+    ) {
+      set(values, key, jsonToStr(item));
+    }
+    if (
+      [
+        'menstruationRestored',
+        'stomachAche',
+        'resumeSex',
+        'insistUseContraceptiveMethods',
+        'replaceContraceptiveMethods',
+        'unexpectedPregnancyAgain',
+        'suggestBeginTime',
+      ].includes(key)
+    ) {
+      const checkedValues = get(item, 'checkedValues.0');
+      const withInputValues = get(item, 'withInputValues');
+      set(values, key, checkedValues);
+      set(values, `${key}Note`, withInputValues);
+    }
+  });
+  return values;
+};

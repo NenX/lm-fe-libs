@@ -1,0 +1,38 @@
+.thalassemia-wrapper {
+  height: 100%;
+  padding: 12px;
+  background-color: #fff;
+}
+
+.thalassemia-form {
+}
+
+.thalassemia-table {
+  &-title {
+    list-style: none;
+    padding: 6px 0;
+    margin-bottom: 0;
+
+    &-item {
+      display: inline-block;
+      margin-right: 24px;
+
+      &-label {
+        &.colon {
+          &::after {
+            content: ':';
+            position: relative;
+            top: -0.5px;
+            margin-left: 2px;
+          }
+        }
+      }
+
+      &-text {
+        display: inline-block;
+        min-width: 86px;
+        font-weight: bold;
+      }
+    }
+  }
+}

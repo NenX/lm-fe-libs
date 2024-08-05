@@ -1,0 +1,28 @@
+export interface IMchc_Admission_productionTimeDocument {
+    "id" : 168,
+    "examTimes" : null,
+    "familyPlanningCert" : null,
+    "familyPlanningCertNote" : null,
+    "deliveryNurse" : null,
+    "recordDate" : "2023-02-13",
+    "hbsag" : null,
+    "hbeag" : null,
+    "hbvDate" : null,
+    "perineumlaceration" : null,
+    "familyPlanningCertandNote" : null,
+    "name" : "产时管理卡",
+    "inpatientNO" : "00000283",
+    "bedNO" : null,
+    "lmp" : null,
+    "edd" : null,
+    "prenatalDiagnosis" : "33",
+    "gestationalWeek" : "--",
+    "gravidity" : null,
+    "parity" : null,
+    "assistedReproduction" : null,
+    "perineumNote" : null,
+    "otherNote" : "111",
+    "midwife" : null,
+    hbsagUnit: string
+    hbeagUnit: string
+}

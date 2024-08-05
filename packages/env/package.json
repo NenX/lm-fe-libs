@@ -1,0 +1,29 @@
+{
+    "name": "@lm_fe/env",
+    "version": "0.1.92",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c rollup.config.js",
+        "build:watch": "rollup -c rollup.config.js --watch",
+        "clean": "rimraf dist",
+        "prebuild": "yarn clean"
+    },
+    "main": "dist/index.js",
+    "directories": {
+        "lib": "dist"
+    },
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@lm_fe/utils": "^0.1.92"
+    },
+    "gitHead": "8c702604f6c4ea0ec69f9e463ce040c308849144"
+}

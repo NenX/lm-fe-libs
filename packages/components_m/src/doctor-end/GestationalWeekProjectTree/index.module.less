@@ -1,0 +1,103 @@
+@lableWidth: 80px;
+
+.gestational-week-project-tree {
+  position: relative;
+  min-height: 80px;
+  padding: 16px 38px 16px 0px;
+
+  &-btns {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    span,
+    a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin: 6px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 3px;
+    }
+    span::selection {
+      color: unset !important;
+      background: none !important;
+    }
+    .center-button {
+      padding-top: 2px;
+    }
+
+    .abnormal-button {
+      font-weight: bold;
+    }
+
+    .background-grey {
+      background-color: rgba(211, 211, 211, 0.5);
+    }
+    .background-blue {
+      background-color: #0e318d;
+    }
+    .color-grey {
+      color: #a9a9a9;
+    }
+    .color-white {
+      color: #fff;
+    }
+  }
+
+  .ant-timeline.ant-timeline-label {
+    .ant-timeline-item-label {
+      width: @lableWidth;
+    }
+    .ant-timeline-item-tail {
+      left: @lableWidth + 12px;
+    }
+    .ant-timeline-item-head {
+      left: @lableWidth + 12px;
+    }
+    .ant-timeline-item-left .ant-timeline-item-content {
+      left: @lableWidth + 4px;
+      width: calc(100% - @lableWidth - 20px);
+    }
+  }
+
+  .arrived-current {
+    .ant-timeline-item-head {
+      width: 18px;
+      height: 18px;
+      border-width: 4px;
+    }
+    .ant-timeline-item-head {
+      margin-left: -8px;
+    }
+  }
+
+  .detail-item {
+    &-date {
+      color: #383f4a;
+    }
+    &-reports {
+      &-normal {
+        color: #007aff;
+      }
+      &-abnormal {
+        color: #ff4974;
+      }
+    }
+  }
+
+  .color-red {
+    color: #ff4974;
+  }
+  .color-grey {
+    color: #828c99;
+  }
+  .color-orange {
+    color: #ff7a00;
+  }
+  .make-bold {
+    font-weight: bold;
+  }
+}

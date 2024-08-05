@@ -1,0 +1,106 @@
+@lableWidth: 120px;
+
+.survey-list {
+  .ant-modal-body {
+    max-height: 750px;
+    overflow-y: auto;
+
+    .ant-tabs-nav {
+      margin-bottom: 0;
+      padding-left: 20px;
+    }
+  }
+
+  .survey-form {
+    .form-item .form-item-unit {
+      width: 58px !important;
+    }
+
+    // 异常输入项
+    .form-item-main .checkox-with-extra .extra-editors {
+      position: relative;
+
+      .ant-input {
+        color: #ff517d;
+        text-overflow: ellipsis;
+        border: none;
+        border-radius: 0;
+      }
+
+      .ant-input-focused,
+      .ant-input:focus {
+        box-shadow: none;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff517d;
+        content: '';
+      }
+    }
+  }
+  .check-items-wrapper {
+    padding: 24px;
+    .ant-timeline.ant-timeline-label {
+      .ant-timeline-item-label {
+        width: @lableWidth;
+      }
+      .ant-timeline-item-tail {
+        left: @lableWidth + 12px;
+      }
+      .ant-timeline-item-head {
+        left: @lableWidth + 12px;
+      }
+      .ant-timeline-item-left .ant-timeline-item-content {
+        left: @lableWidth + 4px;
+        width: calc(100% - @lableWidth - 20px);
+      }
+    }
+
+    .check-items {
+      font-weight: 600;
+    }
+
+    .arrived-current {
+      .ant-timeline-item-head {
+        width: 18px;
+        height: 18px;
+        border-width: 4px;
+      }
+      .ant-timeline-item-head {
+        margin-left: -8px;
+      }
+    }
+
+    .detail-item {
+      &-date {
+        color: #383f4a;
+      }
+      &-reports {
+        &-normal {
+          color: #007aff;
+        }
+        &-abnormal {
+          color: #ff4974;
+        }
+      }
+    }
+
+    .color-red {
+      color: #ff4974;
+    }
+    .color-grey {
+      color: #828c99;
+    }
+    .color-orange {
+      color: #ff7a00;
+    }
+    .make-bold {
+      font-weight: bold;
+    }
+  }
+}

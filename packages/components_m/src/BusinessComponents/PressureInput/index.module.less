@@ -1,0 +1,40 @@
+// @import '../../../assets/styles/theme/variables.less';
+
+.pressure-input-wrapper {
+  display: flex !important;
+  align-items: center;
+
+  .pressure-input {
+    width: 69px !important;
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+    input {
+      padding: 0 4px;
+      text-align: center;
+    }
+  }
+
+  .pressure-input_issue {
+    // color: @issue-bg-color !important;
+    input {
+      // color: @issue-bg-color !important;
+    }
+  }
+
+  .pressure-input_tip {
+    margin-left: 4px;
+  }
+
+  .pressure-input_split {
+    display: inline-block;
+    margin: 0 3px;
+  }
+  .input-split {
+    width: 20px !important;
+    padding-left: 0;
+    padding-right: 0;
+    pointer-events: 'none';
+    text-align: center !important;
+  }
+}

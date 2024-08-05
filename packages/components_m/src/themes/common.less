@@ -1,0 +1,41 @@
+@text-color: rgba(0, 0, 0, 0.65);
+@prenatal-diagnosis-font-size: 14px;
+@border-radius-base: 2px;
+
+.right-bottom-btns {
+  position: fixed;
+  right: 32px;
+  bottom: 26px;
+  z-index: 999;
+  display: inline-block;
+
+  :global(.ant-btn) {
+    min-width: 128px;
+    font-size: @prenatal-diagnosis-font-size;
+    box-shadow: 0px 9px 10px -6px fade(@text-color, 20%), 0px 2px 8px -4px @text-color;
+  }
+
+  :global(.ant-form-item-control-input-content) {
+    text-align: center;
+  }
+}
+
+.circle-icon {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  background-color: #0e318d;
+  border-radius: 50%;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+  }
+}

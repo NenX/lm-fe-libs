@@ -1,0 +1,37 @@
+// @import '../../../../../../../assets/styles/theme/variables.less';
+@color: #c9d9ee;
+
+.FurtherTable {
+  margin-bottom: 12px !important;
+  padding: 2px;
+  position: relative;
+  background-color: #fff;
+
+
+
+  .selected-row {
+    background: @color !important;
+  }
+
+  :global(.ant-table-tbody > tr.ant-table-row:hover > td) {
+    background: @color!important;
+  }
+
+  :global(.ant-table .ant-table-thead th) {
+    font-weight: bold;
+  }
+
+  em {
+    font-size: 8px;
+    color: #999;
+  }
+
+  .btn-wrap {
+    z-index: 9;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+}

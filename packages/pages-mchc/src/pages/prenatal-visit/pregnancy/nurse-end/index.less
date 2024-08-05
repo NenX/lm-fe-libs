@@ -1,0 +1,42 @@
+@import '../../../common.less';
+
+.panel-with-child_content-tabs {
+  height: 100%;
+
+  .ant-tabs-nav {
+    margin-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #fff;
+
+    .ant-tabs-tab {
+      height: 40px;
+    }
+
+    .ant-tabs-tab-active .ant-tabs-tab-btn {
+      font-weight: bold;
+      font-size: 15px;
+      color: @primary-color;
+    }
+  }
+
+  .ant-form-item-explain.ant-form-item-explain-error {
+    color: #ff4d4f;
+    /* margin-bottom: -14px; */
+    line-height: 32px;
+    margin-bottom: -19px;
+  }
+
+  .ant-tabs-content-holder {
+    height: calc(100% - 52px);
+    overflow: auto;
+
+    .ant-tabs-content {
+      height: 100%;
+    }
+  }
+
+  .ant-tabs-tabpane {
+    height: 100%;
+  }
+}

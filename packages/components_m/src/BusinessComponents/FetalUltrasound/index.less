@@ -1,0 +1,54 @@
+.fetal-ultrasound-wrapper {
+  position: relative;
+}
+
+.fetal-ultrasound-title {
+  // position: absolute;
+  // top: -10px;
+  // left: 0;
+  // font-weight: bold;
+}
+
+.fetal-ultrasound-content {
+  .fetal-ultrasound-content-list {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+
+  .fetal-ultrasound-content-list-title {
+    position: absolute;
+    left: -74px;
+    top: 5px;
+    width: 66px;
+    text-align: right;
+    color: #666;
+    &::after {
+      content: ':';
+      position: relative;
+      top: -0.5px;
+      margin-left: 2px;
+    }
+  }
+
+  .fetal-ultrasound-content-list-row {
+    &-label {
+      line-height: 32px;
+      text-align: right;
+      white-space: nowrap;
+
+      &::after {
+        content: ':';
+        position: relative;
+        top: -0.5px;
+        margin: 0 8px 0 2px;
+      }
+
+      .unit {
+        font-style: normal;
+        font-size: 11px;
+      }
+    }
+  }
+}

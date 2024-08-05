@@ -1,0 +1,232 @@
+/**
+ * 新生儿入室登记
+ */
+import { formatDate, formatDateTime, formatDateTimeNoSecond } from '@lm_fe/utils';
+import { APP_CONFIG } from '../../../utils/constants';
+export const neonateEnter: any = [
+  {
+    title: '母亲姓名',
+    dataIndex: 'name',
+    ellipsis: true,
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    fixed: 'left',
+  },
+  {
+    title: '证件号码',
+    dataIndex: 'idNO',
+    ellipsis: true,
+    width: APP_CONFIG.CELL_WIDTH_MIDDLE,
+    align: 'center',
+  },
+  {
+    title: '护理单元',
+    dataIndex: 'areaName',
+    ellipsis: true,
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+  },
+  {
+    title: '住院号',
+    dataIndex: 'inpatientNO',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    ellipsis: true,
+    align: 'center',
+  },
+  {
+    title: '床号',
+    dataIndex: 'bedNO',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    ellipsis: true,
+  },
+  {
+    title: '婴儿性别',
+    dataIndex: 'gender',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    ellipsis: true,
+    render: (value: any) => {
+      const gender = { 1: '男', 2: '女', 3: '未知', 4: '双性' };
+      return gender[value];
+    },
+  },
+  {
+    title: '出生时间',
+    dataIndex: 'deliverytime',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    render: (value: any) => formatDateTime(value),
+  },
+  {
+    title: '体重',
+    dataIndex: 'weight',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    ellipsis: true,
+    align: 'center',
+  },
+  {
+    title: '身长',
+    dataIndex: 'height',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    ellipsis: true,
+  },
+  {
+    title: '分娩孕周',
+    dataIndex: 'labourWeek',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    ellipsis: true,
+  },
+  {
+    title: '分娩方式',
+    dataIndex: 'deliverytype',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    ellipsis: true,
+    render: (value: any) => {
+      const deliverytype = { 1: '自然产', 2: '剖宫产', 3: '吸引产', 4: '钳产', 5: '臀助产', 6: '臀引产', 7: '其他' };
+      return deliverytype[value];
+    },
+  },
+  {
+    title: '乙肝结果SAG',
+    dataIndex: 'sag',
+    inputType: 'input',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    align: 'center',
+    editable: true,
+  },
+  {
+    title: '注射时间',
+    dataIndex: 'injectTime1',
+    inputType: 'single_date_picker',
+    inputProps: {
+      showTime: true,
+      format: formatDateTimeNoSecond.format,
+    },
+    width: APP_CONFIG.CELL_WIDTH_LARGE,
+    align: 'center',
+    editable: true,
+    render: (value: any) => formatDateTimeNoSecond(value),
+  },
+  {
+    title: '批号',
+    dataIndex: 'batchNo1',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    editable: true,
+    inputType: 'input_number',
+  },
+  {
+    title: '执行者',
+    dataIndex: 'injector1',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    editable: true,
+    inputType: 'input',
+  },
+  {
+    title: '注射时间',
+    dataIndex: 'injectTime2',
+    inputType: 'single_date_picker',
+    inputProps: {
+      showTime: true,
+      format: formatDateTimeNoSecond.format,
+    },
+    width: APP_CONFIG.CELL_WIDTH_LARGE,
+    align: 'center',
+    editable: true,
+    render: (value: any) => formatDateTimeNoSecond(value,),
+  },
+  {
+    title: '批号',
+    dataIndex: 'batchNo2',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    editable: true,
+    inputType: 'input_number',
+  },
+  {
+    title: '执行者',
+    dataIndex: 'injector2',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    editable: true,
+    inputType: 'input',
+  },
+  {
+    title: '注射时间',
+    dataIndex: 'injectTime3',
+    inputType: 'single_date_picker',
+    inputProps: {
+      showTime: true,
+      format: formatDateTimeNoSecond.format,
+    },
+    width: APP_CONFIG.CELL_WIDTH_LARGE,
+    align: 'center',
+    editable: true,
+    render: (value: any) => formatDateTimeNoSecond(value,),
+  },
+  {
+    title: '批号',
+    dataIndex: 'batchNo3',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    editable: true,
+    inputType: 'input_number',
+  },
+  {
+    title: '执行者',
+    dataIndex: 'injector3',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    editable: true,
+    inputType: 'input',
+  },
+  {
+    title: '采血日期',
+    dataIndex: 'bloodCollectDate',
+    inputType: 'single_date_picker',
+    inputProps: {
+      format: formatDate.format,
+    },
+    width: APP_CONFIG.CELL_WIDTH_LARGE,
+    align: 'center',
+    editable: true,
+    render: (value: any) => formatDate(value,),
+  },
+  {
+    title: '听筛日期',
+    dataIndex: 'hearingScreeningDate',
+    inputType: 'single_date_picker',
+    inputProps: {
+      format: formatDate.format,
+    },
+    width: APP_CONFIG.CELL_WIDTH_LARGE,
+    align: 'center',
+    editable: true,
+    render: (value: any) => formatDate(value,),
+  },
+  {
+    title: '转科日期',
+    dataIndex: 'transferDate',
+    inputType: 'single_date_picker',
+    inputProps: {
+      format: formatDate.format,
+    },
+    width: APP_CONFIG.CELL_WIDTH_LARGE,
+    align: 'center',
+    editable: true,
+    render: (value: any) => formatDate(value,),
+  },
+  {
+    title: '转科诊断',
+    dataIndex: 'transferDiagnosis',
+    width: APP_CONFIG.CELL_WIDTH_LARGE,
+    editable: true,
+    inputType: 'input',
+  },
+  {
+    title: '签名',
+    dataIndex: 'sign',
+    width: APP_CONFIG.CELL_WIDTH_SMALL,
+    editable: true,
+    inputType: 'input',
+  },
+];

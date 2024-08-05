@@ -1,0 +1,97 @@
+.diag-template {
+  width: 700px !important;
+  height: 600px;
+  .diag-ipt {
+    width: 80%;
+  }
+  .search-info {
+    color: #242741;
+    font-size: 12px;
+    margin: 8px 0 0 5px;
+  }
+  .ant-tabs-content {
+    height: 450px;
+    overflow-y: auto;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before {
+    border: none;
+  }
+  .ant-tabs-bar {
+    border-bottom: none;
+  }
+  .ant-tabs-tab-active {
+    .list-btn {
+      color: #3d8bf7;
+      border: 1px solid #007aff;
+    }
+  }
+  .ant-tabs-ink-bar {
+    display: none !important;
+  }
+  .ant-tabs-nav {
+    margin-bottom: 0;
+    .ant-tabs-tab-inner {
+      padding: 0;
+      padding-bottom: 3px;
+    }
+    .ant-tabs-tab {
+      margin-right: 12px;
+    }
+  }
+  .diag-item {
+    padding-left: 3px;
+    color: #383f4a;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    cursor: pointer;
+    .diag-icon {
+      margin-left: 8px;
+      display: none;
+    }
+    &:hover {
+      font-size: 18px;
+      color: #007aff;
+      border-radius: 6px;
+      background-color: #f2f2fa;
+      .diag-icon {
+        display: inline-block;
+      }
+    }
+    .diag-code {
+      display: inline-block;
+      border: 1px #007aff solid;
+      margin-right: 6px;
+      font-size: 12px;
+      border-radius: 4px;
+      padding: 0 3px;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+  .ant-tree {
+    padding: 0;
+    font-weight: 600;
+    .ant-tree-title {
+      padding-left: 3px;
+      color: #383f4a;
+      font-weight: 600;
+      margin-bottom: 0;
+      cursor: pointer;
+      &:hover {
+        font-size: 18px;
+        color: #007aff;
+        border-radius: 6px;
+        background-color: #f2f2fa;
+      }
+    }
+  }
+  .list-btn {
+    height: 32px;
+    color: #535881;
+    font-weight: 600;
+    padding: 0 15px;
+    background-color: #fff;
+    border: 1px solid #d8dce6;
+  }
+}

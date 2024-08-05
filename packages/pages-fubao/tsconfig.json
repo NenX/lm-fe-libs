@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "module": "esnext",
+    "target": "es5",
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "declaration": true,
+    "baseUrl": ".",
+    "declarationMap": false,
+    "strictNullChecks": true,
+    "keyofStringsOnly": true,
+    "experimentalDecorators": true,
+
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "src/.umi/*",
+    "webpack",
+    "jest"
+  ]
+}

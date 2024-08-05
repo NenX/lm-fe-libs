@@ -1,0 +1,36 @@
+@checkbox-margin-right: 12px;
+
+.custom-checkbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.multiple-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    // margin-right: @checkbox-margin-right;
+  }
+}
+
+.checkbox-input-need-fill-width {
+  .checkox-with-extra {
+    &:first-child {
+      float: left;
+    }
+    .extra-editors {
+      flex: 1;
+    }
+  }
+}
+
+.check-box {
+  .ant-checkbox-inner {
+    width: 20px;
+    height: 20px;
+  }
+  .ant-checkbox-inner::after {
+    left: 31%;
+  }
+}

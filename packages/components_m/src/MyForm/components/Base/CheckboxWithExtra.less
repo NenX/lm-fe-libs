@@ -1,0 +1,40 @@
+@import '../../index.less';
+
+.checkox-with-extra {
+  display: flex;
+  flex-direction: row;
+  min-width: 64px;
+  margin-right: 16px;
+
+  .extra-editors {
+    display: flex;
+
+    & > .extra-editors-label {
+      width: 120px;
+      padding-right: 10px;
+      font-size: smaller;
+      text-align: right;
+    }
+
+    & > .editor {
+      width: calc(100% - 60px);
+    }
+
+    .ant-input {
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+  }
+
+  .ant-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+.global-issue-input .noborder .ant-select-selector .ant-select-selection-search-input {
+  border-bottom: none !important;
+}
+
+.global-issue-input .noborder .ant-select-selector {
+  flex-wrap: nowrap;
+}

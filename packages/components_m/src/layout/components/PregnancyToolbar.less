@@ -1,0 +1,61 @@
+// @import '../../../assets/styles/theme/variables.less';
+
+.toolbar-wrapper {
+  margin-right: 10px;
+  position: relative;
+}
+
+.toolbar-action {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.toolbar-content-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  button {
+    min-width: 102px;
+    margin-bottom: 12px;
+  }
+
+  & > li:last-child {
+    button {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.button-form {
+  margin-top: 18px;
+
+  .ant-form-item {
+    margin-bottom: 18px;
+
+    .ant-form-item-explain {
+      min-width: 18px;
+      position: absolute;
+      top: 32px;
+      left: 0;
+
+      & > div {
+        line-height: 18px;
+      }
+    }
+
+    button {
+      margin-right: 12px;
+    }
+  }
+}
+
+.only-show-text {
+  padding-left: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}

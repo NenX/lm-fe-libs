@@ -1,0 +1,30 @@
+// @import '../../../assets/styles/theme/variables.less';
+
+.checkbox-group-object {
+  flex-wrap: wrap;
+  &-item {
+    margin-right: 12px;
+    margin-left:0 !important;
+    :global(.ant-checkbox + span) {
+      padding-right: 4px;
+    }
+
+    :global(.ant-input) {
+      width: 100px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-left: none;
+      border-top: none;
+      border-right: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    &.warning {
+      .ant-input {
+        // color: @error-color !important;
+        // border-bottom-color: @error-color;
+      }
+    }
+  }
+}

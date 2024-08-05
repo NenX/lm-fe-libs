@@ -1,0 +1,66 @@
+.tracing-mamagement {
+  height: 100%;
+  background-color: #fff;
+  .global-base-table_title-operations {
+    display: none;
+  }
+  .global-base-table_table {
+    height: calc(100vh - 278px) !important;
+  }
+  .tab1 {
+    .global-base-table_table {
+      height: calc(100vh - 249px) !important;
+    }
+  }
+  .tab2 {
+    .global-base-table_table {
+      height: calc(100vh - 314px) !important;
+    }
+    .statistics-container {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      .item {
+        .title {
+          color: #828c99;
+        }
+        .num {
+          color: #828c99;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .ant-tabs-tab {
+    color: #828c99;
+    .tabTitle {
+      font-size: 16px;
+      .tabTitle-img {
+        position: absolute;
+        top: auto;
+        left: 33px;
+      }
+    }
+    .fontNumber {
+      margin: 0 12px;
+      font-size: 36px;
+    }
+  }
+  .ant-tabs-tab:nth-child(2) {
+    margin: 0 132px;
+  }
+}
+
+.tracing-modal {
+  .ant-modal-body {
+    position: relative;
+    max-height: calc(100vh - 240px);
+    overflow: auto;
+  }
+}
+
+@media (max-width: 1420px) {
+  .tracing-mamagement .global-base-table_table {
+    height: calc(100vh - 310px) !important;
+  }
+}

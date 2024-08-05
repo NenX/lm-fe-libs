@@ -1,0 +1,56 @@
+.checkox-with-extra .checkbox-group-object-item-cus .ant-checkbox-wrapper {
+  min-width: 60px;
+}
+.checkbox-group-object {
+  &-item-cus {
+    // margin-right: 12px;
+    display: flex;
+    align-items: baseline;
+    margin-right: 10px;
+    .ant-checkbox + span {
+      padding-right: 4px;
+    }
+
+    .ant-input {
+      width: 100px;
+      padding-right: 5px;
+      padding-left: 5px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    &.warning {
+      .ant-input {
+        color: red !important;
+        border-bottom-color: red;
+      }
+    }
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border: none;
+      border-bottom: 1px solid red;
+      border-radius: 0px;
+    }
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border-bottom: 1px solid red;
+      box-shadow: none;
+    }
+  }
+  &-select {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+    }
+    .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      color: red;
+      border: none;
+    }
+    .ant-select-single .ant-select-selector .ant-select-selection-search {
+      border-bottom: 1px solid red;
+    }
+  }
+}

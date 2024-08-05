@@ -1,0 +1,72 @@
+.doctor-desk-second-visit {
+  height: 100%;
+  &-sider {
+    height: 100%;
+    .ant-card {
+      height: 100%;
+      overflow: auto;
+    }
+    .ant-card-extra {
+      font-size: 18px !important;
+    }
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+      padding: 8px;
+      background: #f5f6fa;
+      .ant-collapse-arrow {
+        position: initial;
+      }
+      .anticon-calendar {
+        margin-left: 8px;
+        margin-right: 4px;
+      }
+    }
+    .ant-collapse-content > .ant-collapse-content-box {
+      padding: 0;
+    }
+    &-list__item {
+      cursor: pointer;
+    }
+    &-list__item_active {
+      background: #eaf4fd;
+    }
+  }
+  &-content {
+    padding-left: 12px;
+    height: 100%;
+    .ant-tabs {
+      padding: 0 8px;
+    }
+    &-block {
+      background: #ffffff;
+      height: 100%;
+      overflow: hidden;
+      .ant-form {
+        height: 100%;
+        .ant-tabs {
+          height: 100%;
+          .ant-tabs-content-holder {
+            padding-bottom: 60px;
+            height: calc(100% - 62px);
+            overflow: auto;
+          }
+        }
+      }
+      &_vertical {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 12px 12px 45px;
+      }
+    }
+  }
+  &-actions {
+    position: fixed;
+    z-index: 2;
+    bottom: 10px;
+    right: 28px;
+    display: flex;
+    button {
+      margin-right: 12px;
+    }
+  }
+}
