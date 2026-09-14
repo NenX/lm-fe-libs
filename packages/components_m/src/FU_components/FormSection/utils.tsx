@@ -118,7 +118,7 @@ export function RenderEditItem(config: any, ReactNode: React.ReactNode, defaultO
     const safe_rules = safe_json_parse(rules)
     const required = safeExec(_config.required as any) ?? _config.required
     // let name = key?.includes('.') ? key.split('.') : key;
-    let name = SMchc_FormDescriptions.parse_form_item_name(config)
+    let name = SMchc_FormDescriptions.format_itemName_arr(config)
 
     const placeholder = get(inputProps, 'placeholder') || '';
     const labelAlign = get(_config, 'labelAlign') ?? get(inputProps, 'labelAlign');

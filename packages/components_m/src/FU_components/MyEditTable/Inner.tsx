@@ -1,7 +1,7 @@
-import { Table_L } from '@lm_fe/components';
+import { format_dataIndex, Table_L } from '@lm_fe/components';
 import { mchcLogger } from '@lm_fe/env';
 import { IMchc_FormDescriptions_Field_Nullable, SMchc_FormDescriptions } from '@lm_fe/service';
-import { format_dataIndex, uuid } from '@lm_fe/utils';
+import { uuid } from '@lm_fe/utils';
 import { Button, Space } from 'antd';
 import { cloneDeep, identity, indexOf, isArray, isEmpty, isEqual, join, set } from 'lodash';
 import React, { lazy, useEffect, useRef, useState } from 'react';
@@ -69,8 +69,8 @@ const MyEditTable: TCommonComponent<IMyEditTableProps, string | any[]> = (props)
         .map((column: any) => {
           const { children = [], align, width, render } = column;
           const inputType = column.inputType;
-          const dataIndex = SMchc_FormDescriptions.get_form_item_name_str(column);
-          const title = SMchc_FormDescriptions.get_form_item_title(column);
+          const dataIndex = SMchc_FormDescriptions.format_itemName_str(column);
+          const title = SMchc_FormDescriptions.get_the_fucking_itemLabel(column);
           const inputProps = column.inputProps
           const editable = !inputProps?.disabled;
           if (!isEmpty(children)) {

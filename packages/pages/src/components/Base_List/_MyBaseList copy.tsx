@@ -1,15 +1,15 @@
 import { mchcConfig, mchcEnv, mchcEvent, mchcLogger, mchcStorage } from '@lm_fe/env';
 import { ModelService, TIdTypeCompatible } from '@lm_fe/service';
-import { AnyObject, assign, Browser, cloneDeep, downloadFile, format_dataIndex, formatDateTime, safe_async_call, shake, sleep } from '@lm_fe/utils';
+import { AnyObject, assign, Browser, cloneDeep, downloadFile, formatDateTime, safe_async_call, shake, sleep } from '@lm_fe/utils';
 import { Divider, Form, message, Space, TablePaginationConfig } from 'antd';
 import { get, isFunction, isNil, isString, omit } from 'lodash';
 import React, { useEffect, useRef, useState } from 'react';
-import { MyBaseListRenderFormSection } from './Helper';
+import { MyBaseList_FormSection } from './Helper';
 import './index.module.less';
 import { IMyBaseList_ActionCtx, IMyBaseList_ColumnType, MyBaseListProps } from './types';
-import { formatProps, get_title, tranform_query_data, use_my_baselist } from './utils';
+import { formatProps, get_title, use_my_baselist } from './utils';
 
-import { MyIcon, Table_L, useMyEffectSafe } from '@lm_fe/components';
+import { format_dataIndex, MyIcon, Table_L, tranform_query_data, useMyEffectSafe } from '@lm_fe/components';
 import { getDefaultRequiredRules, InterceptDisplayFC, MyBaseListComponents, OkButton } from '@lm_fe/components_m';
 import { use_provoke } from '@lm_fe/provoke';
 import { TableRowSelection } from 'antd/es/table/interface';
@@ -202,7 +202,7 @@ export function _MyBaseList<T extends { [x: string]: any, id?: TIdTypeCompatible
     }
     function search_node() {
         try {
-            return searchConfig ? <MyBaseListRenderFormSection config={searchConfig} disabled={loading} /> : null
+            return searchConfig ? <MyBaseList_FormSection config={searchConfig} disabled={loading} /> : null
         } catch (error) {
             return null
         }
